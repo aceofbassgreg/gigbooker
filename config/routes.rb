@@ -2,6 +2,9 @@ Gigbooker::Application.routes.draw do
 
   root :to => 'static_pages#home'
 
+  match 'bands/register' => 'bands#new', :via => :get
+  match 'venues/register' => 'venues#new', :via => :get
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
