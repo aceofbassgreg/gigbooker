@@ -1,1 +1,25 @@
 %h1 Venue Registration Page
+
+= form_for @venue do |f|
+  = flash[:error]
+  = f.label :name, "What is your venue's name?"
+  = f.text_field :name
+  %br
+  = f.label "What is your venue's address?"
+  %br
+    = fields_for @address do |a|
+      = a.label :street_address, "Street Address:"
+      = a.text_field :street_address
+      %br
+      = a.label :city, "City:"
+      = a.text_field :city
+      %br
+      = a.label :state, "State:"
+      = a.text_field :state
+      %br
+      = a.label :postal_code, "Postal Code:"
+      = a.text_field :postal_code
+      %br
+
+  .actions
+    = f.submit 'Register my Venue!'
