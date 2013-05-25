@@ -2,9 +2,9 @@
 
 FactoryGirl.define do
   factory :band do
-    name "MyString"
-    travel_radius "MyString"
-    float "MyString"
-    contact_email "MyString"
+    name "BandExample"
+    travel_radius 15
+    contact_email "BandExample@example.com"
+    location "Fooplace"
   end
 end
