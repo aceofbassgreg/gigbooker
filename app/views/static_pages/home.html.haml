@@ -1,5 +1,11 @@
-%h1 GigBooker
-%h3 Helping up-and-coming bands find venues.
+.container-narrow
+  .jumbotron
+    .text-center
+      %h1 GigBooker
+      %h3 Helping up-and-coming bands find venues.
 
-= link_to("Register Your Band!", new_band_path)
-= link_to("Register Your Venue!", new_venue_path)
+      %br
+
+      = link_to("Register Your Band!", new_band_path, class: "btn btn-large btn-primary")
+
+      = link_to("Register Your Venue!", new_venue_path, class: "btn btn-large btn-primary")
