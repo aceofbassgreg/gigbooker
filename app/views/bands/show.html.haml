@@ -1,3 +1,19 @@
 = flash[:success]
 %br
-= @band.name
+.row
+  .span3
+    #gravatar
+      = gravatar_for @band 
+
+  .span9
+    .info-box
+      %h1
+        = @band.name
+      %br
+      %small
+        = @band.contact_email
+      |
+      %small
+        = @band.location
+
+

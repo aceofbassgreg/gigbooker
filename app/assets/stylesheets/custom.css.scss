@@ -16,6 +16,14 @@ body {
   padding-bottom: 40px;
 }
 
+.gravatar {
+  height: 200px;
+  width: 200px;
+  border: 1px solid #DDDDDD;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
 /* header */
 
 .header {
@@ -31,4 +39,10 @@ body {
     text-decoration: none;
     opacity: .5em;
   }
+}
+
+.info-box {
+  border-bottom-width: 1px;
+  border-bottom-style: groove;
+  border-bottom-color: black;
 }
