@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :address do
-    street_address "1234 Example Street"
-    city "Exampleland"
+    sequence(:street_address) { |n| "#{n} Example Street" }
+    sequence(:city) { |n| "#{n} City" }
     state "VA"
     postal_code 12345
     latitude 10

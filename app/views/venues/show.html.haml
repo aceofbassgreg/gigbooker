@@ -1,4 +1,13 @@
 = flash[:success]
-%br
-.info-box
-  = @venue.name
+%row
+  %br
+  .info-box
+    %h1
+      = @venue.name
+      |
+    %h2
+      / = @address
+
+%row
+  .gigs
+    = @venue.gigs

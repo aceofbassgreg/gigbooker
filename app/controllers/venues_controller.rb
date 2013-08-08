@@ -1,7 +1,7 @@
 class VenuesController < ApplicationController
   def new
     @venue = Venue.new
-    @address = @venue.build_address
+    @address = @venue.build_address(params[:address])
   end
 
   def create

@@ -9,7 +9,7 @@
       %br
       = f.label "What is your venue's address?"
       %br
-        = fields_for @address do |a|
+        = form_for @address, url: venue_addresses_path do |a|
           = a.label :street_address, "Street Address:"
           = a.text_field :street_address
           %br

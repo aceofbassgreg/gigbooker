@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'Home Page for New Users' do
+feature 'Home Page' do
 
 before { visit root_path }
 
