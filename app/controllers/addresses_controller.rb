@@ -5,6 +5,6 @@ class AddressesController < ApplicationController
   end
 
   def create
-    @address = Address.find(params[:address])
+    @address = Address.new(params[:address])
   end
 end

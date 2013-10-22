@@ -3,9 +3,8 @@ Gigbooker::Application.routes.draw do
   root :to => 'static_pages#home'
 
   resources :bands
-  resources :venues do
-    resources :addresses
-  end
+  resources :venues 
+  resource :address
 
   # match 'bands/register' => 'bands#new', :via => :get
   # match 'venues/register' => 'venues#new', :via => :get
