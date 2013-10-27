@@ -6,7 +6,6 @@ class VenuesController < ApplicationController
 
   def create
     @venue = Venue.new(params[:venue])
-    @address = @venue.build_address(params[:address])
     if @venue.save
       flash[:success] = "Congratulations! Your venue has been added!"
       redirect_to @venue

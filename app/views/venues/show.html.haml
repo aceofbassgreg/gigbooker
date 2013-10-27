@@ -3,10 +3,13 @@
   %br
   .info-box
     %h1
-      = @venue.name
-      |
-    %h2
-      = @address
+      = @venue.name |
+      
+    %h3
+      = @venue.address.street_address
+      = @venue.address.city
+      = @venue.address.state
+      = @venue.address.postal_code
 
 %row
   .gigs
