@@ -9,8 +9,9 @@ gem 'coffee-rails', '~> 4.0.0.rc1'
 gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap-sass'
 
-
 gem 'jquery-rails'
+
+gem 'devise'
 
 group :development, :test do
   gem 'rspec-rails'

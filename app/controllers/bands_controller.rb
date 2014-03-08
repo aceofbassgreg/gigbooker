@@ -21,6 +21,6 @@ class BandsController < ApplicationController
   private
 
   def band_params
-    params.require(:band).permit(:contact_email, :name, :travel_radius, :location)
+    params.require(:band).permit(:name, :travel_radius, :location)
   end
 end

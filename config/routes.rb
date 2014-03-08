@@ -1,6 +1,7 @@
 Gigbooker::Application.routes.draw do
 
 
+  devise_for :bands
 #NOTE => if the same resources are across multiple models (or paths), can use 'concern'
 #to DRY code:
 
