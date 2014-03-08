@@ -22,8 +22,9 @@ class VenuesController < ApplicationController
   private
 
   def venue_params
-    params.require(:venue).permit(:name, :address_id, address_attributes: [
-          :city, :latitude, :longitude, :postal_code, :state, :street_address]
+    params.require(:venue).permit(:name, :address_id, gigs_attributes: [:id, :_destroy, :name],
+          address_attributes: [:city, :latitude, :longitude, :postal_code, :state, 
+            :street_address]
           )
   end
 end
