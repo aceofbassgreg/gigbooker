@@ -1,15 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'rails'
+gem 'rails', '4.0.3'
 gem 'pg'
 gem 'haml'
 
-group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'bootstrap-sass'
-end
+gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'coffee-rails', '~> 4.0.0.rc1'
+gem 'uglifier', '>= 1.3.0'
+gem 'bootstrap-sass'
+
 
 gem 'jquery-rails'
 

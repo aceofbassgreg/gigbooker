@@ -5,6 +5,14 @@ class AddressesController < ApplicationController
   end
 
   def create
-    @address = Address.new(params[:address])
+    @address = Address.new(address_params)
+  end
+
+  private
+
+  def address_params
+    params.require(:address).permit(:city, :latitude, :longitude, 
+                  :postal_code, :state, :street_address, :venue_id, 
+                  :venue_attributes)
   end
 end

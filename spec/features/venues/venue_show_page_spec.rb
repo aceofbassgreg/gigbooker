@@ -11,6 +11,5 @@ feature 'Venue Show (Profile) Page' do
     expect(page).to have_content(@venue.address.city)
     expect(page).to have_content(@venue.address.state)
     expect(page).to have_content(@venue.address.postal_code)
-    expect(page).to have_content(@venue.gigs)
   end 
 end

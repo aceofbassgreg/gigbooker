@@ -5,8 +5,6 @@ class Venue < ActiveRecord::Base
 
   accepts_nested_attributes_for :address
 
-  attr_accessible :name, :address_attributes, :address_id
-
   validates_presence_of :name
 
   
