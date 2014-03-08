@@ -4,7 +4,7 @@ class BandsController < ApplicationController
   end
 
   def create
-    @band = Band.new(params[:band])
+    @band = Band.new(band_params)
     if @band.save
       flash[:success] = "Congratulations! Your band has been added!"
       redirect_to @band
@@ -16,5 +16,11 @@ class BandsController < ApplicationController
 
   def show
     @band = Band.find(params[:id])
+  end
+
+  private
+
+  def band_params
+    params.require(:band).permit(:contact_email, :name, :travel_radius, :location)
   end
 end
