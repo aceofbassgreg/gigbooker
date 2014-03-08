@@ -1,5 +1,27 @@
 Gigbooker::Application.routes.draw do
 
+
+#NOTE => if the same resources are across multiple models (or paths), can use 'concern'
+#to DRY code:
+
+# concern :sociable do
+#   resources :tags
+#   resources :foo
+# end
+
+# resources :bands, concerns: :sociable
+
+#Can also pass block to sociable:
+#  concern :sociable do |options|
+# And for options can specify controller methods:
+# resources :bands do 
+#   concerns: :sociable, only: :create
+# end
+
+# Note that instead of ':only' you can also pass ':create'
+
+#If there are a lot of concerns, may want to abstract to object.
+
   root :to => 'static_pages#home'
 
   resources :bands
@@ -7,8 +29,8 @@ Gigbooker::Application.routes.draw do
     resource :address
   end
 
-  # match 'bands/register' => 'bands#new', :via => :get
-  # match 'venues/register' => 'venues#new', :via => :get
+  # get 'bands/register' => 'bands#new'
+  # get 'venues/register' => 'venues#new'
 
 
   # The priority is based upon order of creation:
