@@ -17,6 +17,7 @@ development:
   encoding: unicode
   database: gigbooker_development
   pool: 5
+  host: localhost
   username: Britney_and_Greg
   password:
 
@@ -43,6 +44,7 @@ test:
   encoding: unicode
   database: gigbooker_test
   pool: 5
+  host: localhost
   username: Britney_and_Greg
   password:
 
