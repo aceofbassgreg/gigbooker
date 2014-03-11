@@ -9,7 +9,7 @@ feature 'New Band Registration' do
     fill_in "What is your band's name?", {with: band[:name]}
     fill_in "Where is your band located?", {with: band[:location]}
     fill_in "How far are you willing to travel?", {with: band[:travel_radius]}
-    fill_in "What is your band's email address?", {with: band[:contact_email]}
+    # fill_in "What is your band's email address?", {with: band[:contact_email]}
 
     click_button "Register my Band!"
 
@@ -22,7 +22,7 @@ feature 'New Band Registration' do
 
     fill_in "What is your band's name?", {with: " "}
     fill_in 'Where is your band located?', {with: " "}
-    fill_in "What is your band's email address?", {with: " "}
+    # fill_in "What is your band's email address?", {with: " "}
     fill_in 'How far are you willing to travel?', {with: " "}
 
     click_button 'Register my Band!'

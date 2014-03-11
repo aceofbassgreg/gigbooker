@@ -1,7 +1,8 @@
 Gigbooker::Application.routes.draw do
 
+  root :to => 'static_pages#home' 
 
-  devise_for :bands
+  devise_for :users
 #NOTE => if the same resources are across multiple models (or paths), can use 'concern'
 #to DRY code:
 
@@ -23,7 +24,6 @@ Gigbooker::Application.routes.draw do
 
 #If there are a lot of concerns, may want to abstract to object.
 
-  root :to => 'static_pages#home'
 
   resources :bands
   resources :venues do 

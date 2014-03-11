@@ -1,4 +1,6 @@
 class VenuesController < ApplicationController
+  before_filter :authenticate_user!, except: [:show, :index]
+
   def new
     @venue = Venue.new
     @address = @venue.build_address(params[:address])
